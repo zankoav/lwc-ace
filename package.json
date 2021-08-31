@@ -1,6 +1,6 @@
 {
     "name": "lwc-ace",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "LWC library of components",
     "repository": {
         "type": "git",
@@ -9,7 +9,8 @@
     "author": "Alexandr Zanko",
     "license": "ISC",
     "files": [
-        "frontend/components/ace"
+        "frontend/components/ace",
+        "frontend/common"
     ],
     "lwc": {
         "modules": [

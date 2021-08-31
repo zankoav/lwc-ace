@@ -15,8 +15,10 @@ Add `lwc-ace` npm to `lwc.config.json`
 ...
 ```
 
-## Release Notes
+## Release Notes:
 
+### 2.0.1
+Bug fix with mixin imports
 ### 2.0.0
 Update library for lwc webpack plugin
 
