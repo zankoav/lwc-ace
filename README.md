@@ -1,19 +1,24 @@
-# LWC ACE
+# LWC-ACE
 
-## Webpack Config
+## Setup npm modules
 
-Add `ace` namespace to LWCWebpackPlugin
+Add `lwc-ace` npm to `lwc.config.json`
 ```js
 ...
-    plugins: [
-        new LWCWebpackPlugin({
-            namespace: {
-                ace: path.resolve("./node_modules/lwc-ace/frontend/components")
-            }
-        })
-    ],
+{
+    "modules": [
+        {
+            "npm": "lwc-ace"
+        }
+    ]
+}
 ...
 ```
+
+## Release Notes
+
+### 2.0.0
+Update library for lwc webpack plugin
 
 ## Library of components:
 

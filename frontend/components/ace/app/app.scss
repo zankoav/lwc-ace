@@ -1,5 +1,8 @@
-$a: #ea2;
+@import './../../../common/mixins';
+
+$a: $PRIMARY;
 
 .as{
-    color: $a;
+    color: WHITE;
+    background-color: $a;
 }
