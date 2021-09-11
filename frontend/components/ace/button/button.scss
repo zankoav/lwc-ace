@@ -1,5 +1,8 @@
+@import './../../../common/mixins_ace';
+/* mixins */
 
 .ace-button{
-    color:#192384;
-    border: 4px solid #897867;
+    color: $PRIMARY_1;
+    background-color: $PRIMARY_2;
+    border: 4px solid $PRIMARY_3;
 }

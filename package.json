@@ -1,6 +1,6 @@
 {
     "name": "lwc-ace",
-    "version": "2.0.1",
+    "version": "3.0.0",
     "description": "LWC library of components",
     "repository": {
         "type": "git",
@@ -8,6 +8,25 @@
     },
     "author": "Alexandr Zanko",
     "license": "ISC",
+    "files": [
+        "frontend/components/ace",
+        "frontend/common",
+        "lwc-ace-loader"
+    ],
+    "lwc": {
+        "modules": [
+            {
+                "dir": "frontend/components"
+            }
+        ],
+        "expose": [
+            "ace/button",
+            "ace/input"
+        ]
+    },
+    "keywords": [
+        "lwc"
+    ],
     "scripts": {
         "watch": "webpack serve --open --port 8080"
     },
@@ -33,6 +52,8 @@
         "style-loader": "^3.2.1",
         "webpack": "^5.48.0",
         "webpack-cli": "^4.7.2",
-        "webpack-dev-server": "^3.11.2"
+        "webpack-dev-server": "^3.11.2",
+        "d": "^1.0.1",
+        "loader-utils": "^2.0.0"
     }
 }

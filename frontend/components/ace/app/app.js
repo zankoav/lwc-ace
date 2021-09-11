@@ -1,5 +1,10 @@
 import './app.scss';
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 
 
-export default class App extends LightningElement { }
+export default class App extends LightningElement {
+
+    constructor(){
+        super();
+    }
+}

@@ -1,4 +1,7 @@
+@import './../../../common/mixins_ace';
+/* mixins */
+
 .ace-input{
-    border:1px solid #981263;
-    color: #00F;
+    color: $PRIMARY_1;
+    background-color: $PRIMARY_2;
 }
