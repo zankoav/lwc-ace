@@ -1,8 +1,7 @@
-@import './../../../common/mixins';
-
-$a: $PRIMARY;
+@import './../../../common/mixins_ace';
+/* mixins */
 
 .as{
-    color: WHITE;
-    background-color: $a;
+    color:$PRIMARY_1;
+    background-color: $PRIMARY_2;
 }
