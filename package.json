@@ -1,6 +1,6 @@
 {
     "name": "lwc-ace",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "LWC library of components",
     "repository": {
         "type": "git",
@@ -11,7 +11,7 @@
     "files": [
         "frontend/components/ace",
         "frontend/common",
-        "lwc-ace-loader"
+        "loader"
     ],
     "lwc": {
         "modules": [
