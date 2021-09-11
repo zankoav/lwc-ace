@@ -53,7 +53,7 @@ module.exports = env => {
                             loader: "sass-loader"
                         },
                         {
-                            loader: 'lwc-ace-loader',
+                            loader: 'lwc-ace/loader',
                             options: {
                                 theme: 'vine',
                                 mixins: 'frontend/common/mixins_vine.scss'

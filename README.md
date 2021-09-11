@@ -31,7 +31,7 @@ const pathConstants = 'frontend/common/mixins.scss';
             loader: "sass-loader"
         },
         {
-            loader: 'lwc-ace-loader',
+            loader: 'lwc-ace/loader',
             options: {
                 theme: 'vine'
                 mixins: pathWithConstants
@@ -44,6 +44,8 @@ const pathConstants = 'frontend/common/mixins.scss';
 
 ## Release Notes:
 
+### 3.0.1
+rename lwc-ace/loader
 ### 3.0.0
 added lwc-ace-loader README.md
 ### 2.0.1

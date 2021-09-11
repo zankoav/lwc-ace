@@ -7,3 +7,7 @@
 **3.0.0** — <small> September 11, 2021 </small> 
 
 - added lwc-ace-loader README.md
+
+**3.0.1** — <small> September 11, 2021 </small> 
+
+- rename lwc-ace-loader to lwc-ace/loader
