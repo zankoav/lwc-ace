@@ -21,7 +21,10 @@
         ],
         "expose": [
             "ace/button",
-            "ace/input"
+            "ace/input",
+            "ace/select",
+            "ace/checkbox",
+            "ace/radio"
         ]
     },
     "keywords": [

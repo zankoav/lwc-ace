@@ -1,5 +1,90 @@
 <template>
     <div class="as">
-        <ace-input></ace-input>
+        <h2>Input</h2>
+        <h3>Input Default</h3>
+        <ace-input
+            label="First Name" 
+            name="firstname" 
+        ></ace-input>
+        <h3>Input Default With Value</h3>
+        <ace-input
+            label="Last Name" 
+            name="lastname" 
+            value="Zanko"
+        ></ace-input>
+        <h3>Input Required</h3>
+        <ace-input
+            label="Surname" 
+            name="surname"
+            value="Vladimirovich"
+            required
+            required-message="Please, fill this value"
+        ></ace-input>
+        <h3>Input Required Min Length</h3>
+        <ace-input
+            label="Company Name" 
+            name="companyname"
+            required
+            required-message="Please, fill this value"
+            min-length="4"
+            min-length-message="Error, min length 4"
+        ></ace-input>
+        <h3>Input Required Max Length Only</h3>
+        <ace-input
+            label="Website" 
+            name="website"
+            required
+            required-message="Please, fill this value"
+            max-length="15"
+        ></ace-input>
+        <h3>Input Required Max Length With Message</h3>
+        <ace-input
+            label="Website" 
+            name="website"
+            required
+            required-message="Please, fill this value"
+            max-length="15"
+            max-length-message="Error, max length 15"
+        ></ace-input>
+        <h3>Input Required With Regx</h3>
+        <ace-input
+            label="Website" 
+            name="website"
+            required
+            required-message="Please, fill this value"
+            regx="^([a-zа-яё]+)$"
+            regx-message="Only letters" 
+        ></ace-input>
+        <h3>Input Required With Icon</h3>
+        <ace-input
+            label="Website" 
+            name="website"
+            required
+            required-message="Please, fill this value"
+            icon-show
+        ></ace-input>
+        <h3>Input Disabled</h3>
+        <ace-input
+            label="Email" 
+            name="email"
+            required
+            disabled
+        ></ace-input>
+        <h3>Input Disabled With Value</h3>
+        <ace-input
+            label="Phone" 
+            name="phone"
+            value="+375295558386"
+            disabled
+        ></ace-input>
+        <!-- <hr> -->
+        <!-- <h2>Select</h2>
+        <h3>Select Default</h3>
+        <ace-select></ace-select>
+        <h3>Radio</h3>
+        <ace-radio></ace-radio>
+        <h3>Checkbox</h3>
+        <ace-checkbox></ace-checkbox>
+        <h3>Button</h3> -->
     </div>
 </template>

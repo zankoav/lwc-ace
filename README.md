@@ -33,7 +33,7 @@ const pathConstants = 'frontend/common/mixins.scss';
         {
             loader: 'lwc-ace/loader',
             options: {
-                theme: 'vine'
+                theme: 'vine',
                 mixins: pathWithConstants
             }
         }

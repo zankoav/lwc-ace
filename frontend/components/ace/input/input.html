@@ -1,5 +1,27 @@
 <template>
-  <div class="ace-input">
-    <input type={type} placeholder={placeholder} />
-  </div>
+	<label class="ace-input" onmousedown={startDown} ontouchstart={startDown} for={ID}>
+		<div class={cssContainer}>
+			<div class="ace-input__text-block">
+				<div class="ace-input__label">{label}</div>
+				<input class="ace-input__handler" 
+					id={ID}
+					onfocus={focusHandler}
+					onblur={blurHandler}
+					oninput={inputHandler}
+					type="text" 
+					name={name}
+					value={value}/>
+			</div>
+			<div class="ace-input__icon-place">
+				<slot name="iconPlace">
+					<ace-icon type={iconType} class="ace-input__icon"></ace-icon>
+				</slot>
+			</div>
+			<div class="ace-input__drop-down-place"></div>
+			<div class="ace-input__required-place">
+				<div if:true={isRequired} class="ace-input__required"></div>
+			</div>
+		</div>
+		<div class="ace-input__message">{message}</div>
+	</label>
 </template>

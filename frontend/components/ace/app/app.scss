@@ -1,7 +1,22 @@
 @import './../../../common/mixins_ace';
 /* mixins */
 
-.as{
-    color:$PRIMARY_1;
-    background-color: $PRIMARY_2;
+body{
+    margin: 0;
 }
+
+.as{
+    // color:$PRIMARY_1;
+    // background-color: $PRIMARY_2;
+
+    margin: 12px;
+
+    @media (min-width:768px) {
+        max-width: 320px;
+        margin: 32px auto;
+    }
+    
+}
+
+
+
