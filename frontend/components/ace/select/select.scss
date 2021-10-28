@@ -1,7 +1,203 @@
 @import './../../../common/mixins_ace';
+
+$ACE_INPUT_BR_COLOR: #D4D6D8;
+$ACE_INPUT_ACTIVE_BR_COLOR: #A7ACAF;
+$ACE_INPUT_ERROR_BR_COLOR: #AF1D2B;
+$ACE_INPUT_SUCCESS_BR_COLOR: #3FC3D3;
+$ACE_INPUT_DISABLED_BR_COLOR: #F6F6F6;
+$ACE_INPUT_DISABLED_BCG_COLOR: #F6F6F6;
+$ACE_INPUT_REQUIRED_BG_COLOR: #AF1D2B;
+$ACE_INPUT_DISABLED_REQUIRED_BG_COLOR: #CD747D;
+$ACE_INPUT_MESSAGE_ERROR_COLOR: #AF1D2B;
+$ACE_SELECT_OPTIONS_BG: #ffffff;
+$ACE_INPUT_LABEL_COLOR: #A7ACAF;
+$ACE_INPUT_DISABLED_COLOR: #7B8387;
+$ACE_INPUT_COLOR: #4D575C;
+$ACE_INPUT_PX: 24px;
+$ACE_INPUT_FF: 'Work Sans', sans-serif;
+
 /* theme */
 
+
 .ace-select{
-    // color: $PRIMARY_1;
-    // background-color: $PRIMARY_2;
+    font-family: $ACE_INPUT_FF;
+    position: relative;
+
+    &__container{
+        cursor: pointer;
+        display: flex;
+        height: 48px;
+        border-radius: 24px;
+        transition: all .3s;
+        border: 2px solid $ACE_INPUT_BR_COLOR;
+        
+
+        &_active{
+            .ace-select__drop-down{
+                transform: translateY(-4px) scale(-1);
+            }
+            border-color: $ACE_INPUT_ACTIVE_BR_COLOR;
+        }
+
+        &_error{
+            & + .ace-select__message{
+                line-height: 16px;
+                opacity: 1;
+                top: 0px;
+                color:$ACE_INPUT_MESSAGE_ERROR_COLOR;
+            }
+            border-color: $ACE_INPUT_ERROR_BR_COLOR;
+        }
+
+        &_success{
+            border-color: $ACE_INPUT_SUCCESS_BR_COLOR;
+
+            .ace-select__label{
+                font-size: 10px;
+                line-height: 12px;
+            }
+
+            .ace-select__handler{
+                height: 18px;
+                opacity: 1;
+            }
+        }
+
+        &_empty{
+            border-color: $ACE_INPUT_SUCCESS_BR_COLOR;
+        }
+
+        &_disabled{
+            border-color: $ACE_INPUT_DISABLED_BR_COLOR;
+            background-color: $ACE_INPUT_DISABLED_BCG_COLOR;
+            cursor: not-allowed;
+
+            .ace-select__handler{
+                color: $ACE_INPUT_DISABLED_COLOR;
+            }
+            .ace-select__required{
+                background-color: $ACE_INPUT_DISABLED_REQUIRED_BG_COLOR;
+            }
+        }
+
+        &_value{
+            .ace-select__label{
+                font-size: 10px;
+                line-height: 12px;
+            }
+
+            .ace-select__handler{
+                height: 18px;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__text-block{
+        flex-grow: 1;
+        padding-left: $ACE_INPUT_PX;
+        padding-right: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__required-place{
+        position: relative;
+        flex-shrink: 0;
+        height: 100%;
+        width: $ACE_INPUT_PX;
+    }
+
+    &__required{
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: $ACE_INPUT_REQUIRED_BG_COLOR;
+    }
+
+    &__drop-down-place{
+        width: 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    &__drop-down{
+        transition: all .3s;
+        transform-origin: center center;
+    }
+
+    &__icon-place{
+        overflow: hidden;
+        width: 20px;
+        height: 100%;
+        flex-shrink: 0;
+        margin-right: 4px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon{
+        display: flex;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__message{
+        padding: 0 $ACE_INPUT_PX;
+        min-height: 16px;
+        line-height: 0px;
+        opacity: 0;
+        transition: color .3s, opacity .3s, line-height .2s;
+        font-size: 10px;
+    }
+
+    &__label{
+        font-size: 16px;
+        line-height: 1;
+        color: $ACE_INPUT_LABEL_COLOR;
+        transition: all .3s;
+    }
+
+    &__handler{
+        color:$ACE_INPUT_COLOR;
+        display: flex;
+        height: 0px;
+        overflow: hidden;
+        opacity: 0;
+        font-size: 16px;
+        line-height: 16px;
+        transition: all .3s;
+    }
+
+    &__options{
+        position: absolute;
+        z-index: 1000;
+        visibility: hidden;
+        top: 50px;
+        left: $ACE_INPUT_PX;
+        width: calc(100% - 48px);
+        border: 2px solid $ACE_INPUT_ACTIVE_BR_COLOR;
+        background-color: $ACE_SELECT_OPTIONS_BG;
+        max-height: 160px;
+        overflow-y: auto;
+
+        &_active{
+            visibility: visible;
+        }
+    }
+
+    &__option{
+        display: block;
+        border-bottom: 1px solid $ACE_INPUT_DISABLED_BCG_COLOR;
+
+        &:last-child{
+            border-bottom: none;
+        }
+    }
 }

@@ -80,7 +80,6 @@ export default class Input extends LightningElement {
             }else{
                 result += " ace-input__container_error";
             }
-            
         }
         return result;
     }

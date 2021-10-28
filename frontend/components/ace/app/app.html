@@ -77,11 +77,49 @@
             value="+375295558386"
             disabled
         ></ace-input>
-        <!-- <hr> -->
-        <!-- <h2>Select</h2>
+        <hr>
+       <h2>Select</h2>
         <h3>Select Default</h3>
-        <ace-select></ace-select>
-        <h3>Radio</h3>
+        <ace-select
+            name="colors"
+            label="Colors"
+            options={opts}>
+        </ace-select>
+        <h3>Select Required</h3>
+        <ace-select
+            name="colors"
+            label="Colors"
+            required
+            required-message="Please, fill this value"
+            options={opts}>
+        </ace-select>
+        <h3>Select Required With Icon</h3>
+        <ace-select
+            name="colors"
+            label="Colors"
+            icon-show
+            required
+            required-message="Please, fill this value"
+            options={opts}>
+        </ace-select>
+        <h3>Select Disabled</h3>
+        <ace-select
+            name="colors"
+            label="Colors"
+            disabled
+            options={opts}>
+        </ace-select>
+        <h3>Select Disabled Required</h3>
+        <ace-select
+            name="colors"
+            label="Colors"
+            disabled
+            required
+            value="opt_1"
+            options={opts}>
+        </ace-select>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad placeat eius cupiditate, necessitatibus itaque quis doloribus omnis beatae aliquid animi velit consequuntur, dolor incidunt fuga alias illum, vitae voluptatum id ipsam sint quidem. Corrupti dolores, cumque doloremque voluptates quia placeat laborum veniam provident beatae ratione alias animi aut, quisquam tempore temporibus repellat molestiae! Voluptatibus ullam culpa earum reprehenderit quasi, repellendus ratione, eaque autem sapiente vel asperiores, et velit nulla adipisci saepe! Saepe, facilis veritatis. Aperiam aut rem optio quas a pariatur nostrum consectetur in fuga laboriosam, ex ab quis vel rerum ipsum sed recusandae adipisci, minus vitae blanditiis culpa dolore?</p>
+         <!-- <h3>Radio</h3>
         <ace-radio></ace-radio>
         <h3>Checkbox</h3>
         <ace-checkbox></ace-checkbox>

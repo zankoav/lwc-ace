@@ -1,5 +1,32 @@
 <template>
   <div class="ace-select">
-    Ace Select
-  </div>
+		<div class={cssContainer} onblur={blurHandler} tabindex={tabIndex} onclick={focusHandler}>
+			<div class="ace-select__text-block">
+				<div class="ace-select__label">{label}</div>
+				<div class="ace-select__handler">{selectedLabel}</div>
+			</div>
+			<div class="ace-select__icon-place">
+				<slot name="iconPlace">
+					<ace-icon type={iconType} class="ace-select__icon"></ace-icon>
+				</slot>
+			</div>
+			<div class="ace-select__drop-down-place">
+				<ace-icon type="arrow-down" class="ace-select__drop-down"></ace-icon>
+			</div>
+			<div class="ace-select__required-place">
+				<div if:true={required} class="ace-select__required"></div>
+			</div>
+			<div class={cssOptions}>
+				<template for:each={options} for:item="item">
+					<ace-select-option 
+						key={item.value} 
+						class="ace-select__option" 
+						onselectchange={changeCurrentOption}
+						option={item}>
+					</ace-select-option>
+				</template>
+			</div>
+		</div>
+		<div class="ace-select__message">{message}</div>
+	</div>
 </template>
