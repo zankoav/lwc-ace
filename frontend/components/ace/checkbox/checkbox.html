@@ -1,5 +1,14 @@
 <template>
-  <div class="ace-radio">
-    Ace Checkbox
+  <div class={cssComponent} onclick={clickHandler}>
+    <div class="ace-checkbox__container">
+      <div class="ace-checkbox__icon-box">
+        <ace-icon class="ace-checkbox__icon" type={iconType}></ace-icon>
+        <div class="ace-checkbox__required-place">
+          <div if:true={required} class="ace-checkbox__required"></div>
+        </div>
+      </div>
+      <div lwc:dom="manual" class="ace-checkbox__label"></div>
+    </div>
+    <div class="ace-checkbox__message">{requiredMessage}</div>
   </div>
 </template>
