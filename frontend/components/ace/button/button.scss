@@ -2,7 +2,38 @@
 /* mixins */
 
 .ace-button{
-    color: $PRIMARY_1;
-    background-color: $PRIMARY_2;
-    border: 4px solid $PRIMARY_3;
+    cursor: pointer;
+    text-align: center;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #7B8387;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 16px;
+    transition: all .3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+
+    &:hover{
+        background-color: #A7ACAF;
+    }
+
+    &_primary{
+        background-color: #3FC3D3;
+
+        &:hover{
+            background-color: #61CCD9;
+        }
+    }
+
+    &_disabled{
+        cursor: not-allowed;
+        background-color: #A7ACAF;
+    }
+
+    &_disabled.ace-button_primary{
+        background-color: #61CCD9;
+    }    
 }

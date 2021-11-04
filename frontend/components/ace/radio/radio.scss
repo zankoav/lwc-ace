@@ -1,7 +1,70 @@
 @import './../../../common/mixins_ace';
 /* theme */
 
+$ACE_INPUT_MESSAGE_ERROR_COLOR: #AF1D2B;
+$ACE_INPUT_REQUIRED_BG_COLOR: #AF1D2B;
+$ACE_INPUT_DISABLED_REQUIRED_BG_COLOR: #CD747D;
+
+
 .ace-radio{
-    // color: $PRIMARY_1;
-    // background-color: $PRIMARY_2;
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        cursor: pointer;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    &__label {
+        color: #A7ACAF;
+        font-size: 14px;
+        line-height: 1;
+        display: flex;
+    }
+
+    &__required{
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        margin-left: 4px;
+        border-radius: 100%;
+        background-color: $ACE_INPUT_REQUIRED_BG_COLOR;
+    }
+
+    &__message{
+        min-height: 16px;
+        line-height: 0px;
+        opacity: 0;
+        transition: color .3s, opacity .3s, line-height .2s;
+        font-size: 10px;
+    }
+
+    &_vertical{
+        .ace-radio__items{
+            flex-direction: column;
+        }
+
+        .ace-radio__item{
+            align-self: flex-start;
+        }
+    }
+
+    &_error{
+        .ace-radio__message{
+            line-height: 16px;
+            opacity: 1;
+            color:$ACE_INPUT_MESSAGE_ERROR_COLOR;
+        }
+    }
+
+    &_disabled{
+        .ace-radio__required{
+            background-color: $ACE_INPUT_DISABLED_REQUIRED_BG_COLOR;
+        }
+    }
+
 }

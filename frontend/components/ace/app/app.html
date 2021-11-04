@@ -1,6 +1,6 @@
 <template>
     <div class="as">
-        <!-- <h2>Input</h2>
+        <h2>Input</h2>
         <h3>Input Default</h3>
         <ace-input
             label="First Name" 
@@ -117,8 +117,8 @@
             required
             value="opt_1"
             options={opts}>
-        </ace-select> -->
-        <!-- <h2>Checkbox</h2>
+        </ace-select> 
+        <h2>Checkbox</h2>
         <h3>Checkbox Default</h3>
         <ace-checkbox
             name="agreement"
@@ -161,11 +161,60 @@
             label="I agree with, sit amet consectetur adipisicing elit <a href='https://lightning-soft.com'>terms and conditions</a> Ad placeat <b>eius</b> cupiditate, necessitatibus itaque quis."
             required-message="Error required field"
         >
-        </ace-checkbox> -->
+        </ace-checkbox>
         <h3>Radio</h3>
-        <ace-radio></ace-radio>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad placeat eius cupiditate, necessitatibus itaque quis doloribus omnis beatae aliquid animi velit consequuntur, dolor incidunt fuga alias illum, vitae voluptatum id ipsam sint quidem. Corrupti dolores, cumque doloremque voluptates quia placeat laborum veniam provident beatae ratione alias animi aut, quisquam tempore temporibus repellat molestiae! Voluptatibus ullam culpa earum reprehenderit quasi, repellendus ratione, eaque autem sapiente vel asperiores, et velit nulla adipisci saepe! Saepe, facilis veritatis. Aperiam aut rem optio quas a pariatur nostrum consectetur in fuga laboriosam, ex ab quis vel rerum ipsum sed recusandae adipisci, minus vitae blanditiis culpa dolore?</p>
-        
-        <!-- <h3>Button</h3> -->
+        <h2>Radio Default</h2>
+        <ace-radio 
+            options={opts}
+            label="City"
+            name="city"
+        ></ace-radio>
+        <h2>Radio Required</h2>
+        <ace-radio 
+            options={opts}
+            label="City"
+            name="city"
+            required
+            required-message="Error required field"
+        ></ace-radio>
+        <h2>Radio Required With Value</h2>
+        <ace-radio 
+            options={opts}
+            label="City"
+            name="city"
+            value="opt_2"
+            required
+            required-message="Error required field"
+        ></ace-radio>
+        <h2>Radio Required With Value And Disabled</h2>
+        <ace-radio 
+            options={opts}
+            label="City"
+            name="city"
+            value="opt_2"
+            required
+            required-message="Error required field"
+            disabled
+        ></ace-radio>
+        <h2>Radio Required With Value And Vertical</h2>
+        <ace-radio 
+            options={opts}
+            label="City"
+            name="city"
+            value="opt_2"
+            required
+            required-message="Error required field"
+            vertical
+        ></ace-radio>
+    
+        <h2>Button</h2>
+        <h3>Button Base</h3>
+        <ace-button label="Continue"></ace-button>
+        <h3>Button Base Disabled</h3>
+        <ace-button label="Continue" disabled></ace-button>
+        <h3>Button Primary</h3>
+        <ace-button label="Continue" variant="primary"></ace-button>
+        <h3>Button Primary Disabled</h3>
+        <ace-button label="Continue" variant="primary" disabled></ace-button>        
     </div>
 </template>

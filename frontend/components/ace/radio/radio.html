@@ -1,5 +1,14 @@
 <template>
-  <div class="ace-radio">
-    Ace Radio
+  <div class={cssContainer}>
+    <div class="ace-radio__label">
+      {label}
+      <span if:true={required} class="ace-radio__required"></span>
+    </div>
+    <div class="ace-radio__items">
+      <template for:each={opts} for:item="item">
+        <ace-radio-option disabled={disabled} onradiochange={changeHandler} key={item.value} class="ace-radio__item" option={item}></ace-radio-option>
+      </template>
+    </div>
+    <div class="ace-radio__message">{requiredMessage}</div>
   </div>
 </template>
