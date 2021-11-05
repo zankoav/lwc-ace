@@ -1,0 +1,48 @@
+@import './../../../common/mixins_ace';
+/* theme */
+
+.ace-radio-option {
+
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    color: $ACE_CHECKBOX_LABEL_COLOR;
+
+    &__circle{
+        display: inline-block;
+        margin-right: 0.5rem;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        border: 1px solid $ACE_INPUT_LABEL_COLOR;
+        position: relative;
+    }
+    
+    &_selected{
+        .ace-radio-option__circle{
+            &::after{
+                content: '';
+                position: absolute;
+                height: 6px;
+                width: 6px;
+                top: 3px;
+                left: 3px;
+                border-radius: 100%;
+                background-color: $ACE_INPUT_ERROR_BR_COLOR;
+            }
+        }
+    }
+
+    &_disabled{
+        cursor: not-allowed;
+        color: $ACE_CHECKBOX_LABEL_DISABLED_COLOR;
+
+        .ace-radio-option__circle{
+            &::after{
+                background-color: $ACE_INPUT_DISABLED_REQUIRED_BG_COLOR;
+            }
+        }
+    }
+
+    
+}

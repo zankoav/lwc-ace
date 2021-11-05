@@ -1,6 +1,6 @@
 {
     "name": "lwc-ace",
-    "version": "3.0.2",
+    "version": "4.0.0",
     "description": "LWC library of components",
     "repository": {
         "type": "git",

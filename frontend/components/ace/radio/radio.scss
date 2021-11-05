@@ -1,11 +1,6 @@
 @import './../../../common/mixins_ace';
 /* theme */
 
-$ACE_INPUT_MESSAGE_ERROR_COLOR: #AF1D2B;
-$ACE_INPUT_REQUIRED_BG_COLOR: #AF1D2B;
-$ACE_INPUT_DISABLED_REQUIRED_BG_COLOR: #CD747D;
-
-
 .ace-radio{
 
     &__items {
